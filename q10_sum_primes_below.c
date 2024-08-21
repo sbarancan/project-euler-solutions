@@ -16,20 +16,20 @@ int isPrime(long long num)
 
 int main(void) 
 {
-    long long count = 0;
-    long long sum_prime = 0;
-    long long which_prime = 2000000;
+    long long count = 5;
+    long long sum = 5;  //assume 2 + 3,  and go 2 steps in loop
+    long long limit = 2000000;
 
     while(1)
     {
         if (isPrime(count)){
-            sum_prime += count;
+            sum += count;
         }
-        if (count == which_prime)
+        if (count >= limit)
             break;
 
-        count++;
+        count += 2;
     }
 
-    printf("%lld is sum of primes below %lld", sum_prime, count);
+    printf("%lld is sum of primes below %lld", sum, count);
 }
